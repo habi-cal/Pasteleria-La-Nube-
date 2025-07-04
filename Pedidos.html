@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pedidos</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="Estilo.css">
+</head>
+
+<header>
+    <img class="LogoCecy" src="Logo Cecytem.png">
+    <button class="BotonInicio"><a href="index.html">Ir a inicio</a></button>
+</header>
+
+<body>
+    <table>
+        <tr>
+            <td><h1>PASTELERÍA</h1></td>
+            <td><img class="LogoPasteleria" src="Logo.png" /></td>
+        </tr>
+    </table>
+    <br><br>
+
+    <h3>¡REALIZA TÚ PEDIDO AQUÍ!</h3><br>
+
+    <form action="Conexion_Agregar_y_Eliminar.php" method="post">
+        <label for="NoPedido">Número de pedido</label>
+        <input type="number" id="NoPedido" name="NoPedido" required><br><br>
+
+        <label for="Nombre">Nombre de quien realiza el pedido</label>
+        <input type="text" id="Nombre" name="Nombre" required><br><br>
+
+        <label for="Numerotelefonico">Número telefónico</label>
+        <input type="number" id="Numerotelefonico" name="Numerotelefonico" required><br><br>
+
+        <label for="Tipopastel">¿Qué pastel desea?</label>
+        <select id="Tipopastel" name="Tipopastel">
+            <option value="Pastel Red Velvet">Pastel Red Velvet</option>
+            <option value="Pastel de Chocolate Ferrero">Pastel de Chocolate Ferrero</option>
+            <option value="Pastel de Fresas con Crema">Pastel de Fresas con Crema</option>
+            <option value="Pastel de Tres Leches">Pastel de Tres Leches</option>
+            <option value="Pastel de Limón con Merengue">Pastel de Limón con Merengue</option>
+            <option value="Pastel Drip Cake de Vainilla">Pastel Drip Cake de Vainilla</option>
+        </select><br><br>
+
+        <label for="cantidadpastel">¿Qué cantidad desea comprar?</label>
+        <input type="number" id="cantidadpastel" name="cantidadpastel" required><br><br>
+
+        <label for="Fechadeentrega">Fecha de entrega</label>
+        <input type="date" id="Fechadeentrega" name="Fechadeentrega" required><br><br>
+
+        <label for="Horadeentrega">Hora de entrega</label>
+        <input type="time" id="Horadeentrega" name="Horadeentrega" required><br><br>
+        <input type="hidden" name="accion" value="insertar">
+        <input type="submit" value="Enviar pedido">
+    </form>
+
+    <br><br>
+    <h3>¡ELIMINAR UN PEDIDO!</h3>
+    <form action="Conexion_Agregar_y_Eliminar.php" method="post">
+        <label for="NoPedidoEliminar">Número de pedido</label>
+        <input type="number" id="NoPedidoEliminar" name="NoPedido" required><br><br>
+        <input type="hidden" name="accion" value="eliminar">
+        <input type="submit" value="Eliminar pedido">
+    </form>
+
+    <footer>
+        <br>
+        <h2>Elaborado Por: Reyna Abigail Patricio Domínguez</h2>
+        <h2>Grupo: 403</h2>
+    </footer>
+
+</body>
+
+</html>
